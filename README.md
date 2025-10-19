@@ -55,14 +55,22 @@ cd svd-image-compression-app
 ```
 
 ### 2: Create a Virtual Environment
+```
 python -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
+```
 
 ### 3: Install Dependencies
+```
 pip install -r r.txt
+```
 
 ### 4: Run the Flask Server
+```
 python __init__.py
+```
 
 ### 5: Open in Browser
+```
 http://127.0.0.1:5000/
+```
