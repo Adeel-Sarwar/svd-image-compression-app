@@ -20,9 +20,7 @@ Users can upload any image, select a compression level (`k`), and instantly view
 
 SVD (Singular Value Decomposition) decomposes an image matrix into three matrices:
 
-\[
-A = U \Sigma V^T
-\]
+A=UΣVT
 
 By keeping only the **top k singular values**, we can reconstruct a close approximation of the original image with far fewer data points — reducing file size while maintaining most of the visual quality.
 
@@ -51,22 +49,28 @@ By keeping only the **top k singular values**, we can reconstruct a close approx
 ## Installation & Setup
 
 ### 1: Clone the Repository
-```bash
+```
 git clone https://github.com/Adeel-Sarwar/svd-image-compression-app.git
 cd svd-image-compression-app
+```
 
 ### 2: Create a Virtual Environment
-```bash
+```
 python -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
+```
 
 ### 3: Install Dependencies
-```bash
+```
 pip install -r r.txt
+```
 
 ### 4: Run the Flask Server
-```bash
+```
 python __init__.py
+```
 
 ### 5: Open in Browser
+```
 http://127.0.0.1:5000/
+```
