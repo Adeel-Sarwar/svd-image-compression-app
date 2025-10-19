@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for
 from werkzeug.utils import secure_filename
 from compressor import compress_image
 import os
@@ -14,14 +14,12 @@ def index():
 @app.route('/compress', methods=['POST'])
 def compress():
     if 'image' not in request.files:
-        flash('No file uploaded!')
         return redirect("/")
 
     file = request.files['image']
     k = int(request.form.get('k', 50))
 
     if file.filename == '':
-        flash('No selected file!')
         return redirect("/")
 
     if file:
@@ -45,8 +43,6 @@ def compress():
                                original_image=url_for('static', filename=f'uploads/{filename}'),
                                compressed_image=url_for('static', filename=f'results/compressed_{filename}'),
                                k=k)
-
-    flash('File upload failed!')
     return redirect("/")
 
 
