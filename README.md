@@ -49,8 +49,10 @@ By keeping only the **top k singular values**, we can reconstruct a close approx
 ## Installation & Setup
 
 ### 1: Clone the Repository
+```
 git clone https://github.com/Adeel-Sarwar/svd-image-compression-app.git
 cd svd-image-compression-app
+```
 
 ### 2: Create a Virtual Environment
 python -m venv venv
